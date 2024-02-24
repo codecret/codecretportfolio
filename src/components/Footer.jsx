@@ -11,7 +11,7 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="mt-8 sm:px-[140px] sm:py-10 px-6 py-4 bg-black mr-3  ">
+    <footer className="mt-8 sm:px-[140px] sm:py-10 px-6 py-4 bg-black mr-3 w-full ">
       <div className="flex justify-between">
         <div>
           <p className="text-sm">Copyright © 2023. All rights are reserved</p>
@@ -33,7 +33,9 @@ const Footer = () => {
             />
             <AiFillGithub
               className="icon-social cursor-pointer"
-              onClick={() => window.open("https://github.com/Y7gn", "_blank")}
+              onClick={() =>
+                window.open("https://github.com/codecret", "_blank")
+              }
             />
             <AiFillTwitterCircle
               className="icon-social cursor-pointer"

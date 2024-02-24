@@ -23,12 +23,14 @@ import {
   jobit,
   ecommerce,
   threejs,
-  hp,
+  macbook,
   monitor,
   keyboard,
   mouse,
   ringLight,
   alexa,
+  laptopStand,
+  screenbar,
 } from "../assets";
 
 export const navLinks = [
@@ -270,8 +272,8 @@ const projects = [
 
 const setup = [
   {
-    image: hp,
-    title: "HP Pavilion dk0007ne",
+    image: macbook,
+    title: "MacBook Pro M3",
   },
   {
     image: monitor,
@@ -279,11 +281,11 @@ const setup = [
   },
   {
     image: keyboard,
-    title: "Gamepower OGRE RGB keyboard",
+    title: "Royal Kludge RK71 ",
   },
   {
     image: mouse,
-    title: "Gamepower 10000DPI Mouse ",
+    title: "Logitech G304 ",
   },
   {
     image: alexa,
@@ -292,6 +294,14 @@ const setup = [
   {
     image: ringLight,
     title: "Ring Light ",
+  },
+  {
+    image: laptopStand,
+    title: "Laptop Stand Holder With Cooling Fan",
+  },
+  {
+    image: screenbar,
+    title: "Laptop Stand Holder With Cooling Fan",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, setup };

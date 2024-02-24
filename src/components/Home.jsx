@@ -10,16 +10,15 @@ const Home = () => {
         <div>
           <div>
             <img
-              src={"/123.jpg"}
+              src={"/123.jpeg"}
               alt="not found"
               className="coverImg coverImgColor1 flex flex-row justify-center"
             />
           </div>
 
           <h1 className={`${styles.heroHeadText} text-white container`}>
-            Hi, I'm{" "}
+            Hi, I'm
             <span className="text-[#915EFF] up">
-              {" "}
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter

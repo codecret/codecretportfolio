@@ -229,7 +229,7 @@ body {
 }
 
 .coverImg {
-  --border: 15px;
+  --border: 10px;
   --gap: 12px;
   --color: #c6c4c3;
   width: 200px;

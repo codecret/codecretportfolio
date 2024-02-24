@@ -30,12 +30,14 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import ecommerce from "./ecommerce.png";
 
-import hp from "./setuptransparent/hpdk.png";
+import macbook from "./setuptransparent/macbook.png";
 import monitor from "./setuptransparent/monitor.png";
 import keyboard from "./setuptransparent/keyboard.png";
 import mouse from "./setuptransparent/mouse.png";
 import alexa from "./setuptransparent/alexa.png";
 import ringLight from "./setuptransparent/ringlight.png";
+import laptopStand from "./setuptransparent/laptopstand.png";
+import screenbar from "./setuptransparent/screenbar.png";
 
 export {
   logo,
@@ -66,10 +68,12 @@ export {
   carrent,
   jobit,
   ecommerce,
-  hp,
+  macbook,
   monitor,
   keyboard,
   mouse,
   alexa,
   ringLight,
+  laptopStand,
+  screenbar,
 };

@@ -14,21 +14,24 @@ import {
 
 const HomePage = () => {
   return (
-    <div className="relative z-0 bg-primary">
-      <div className=" bg-cover bg-no-repeat bg-center">
-        <Home />
+    <>
+      <Navbar links={true} />
+      <div className="relative z-0 bg-primary">
+        <div className=" bg-cover bg-no-repeat bg-center">
+          <Home />
+        </div>
+        <About />
+        {/* <Experience /> */}
+        {/* <Tech /> */}
+        <Works />
+        <Hero />
+        {/* <Feedbacks /> */}
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
-      <About />
-      {/* <Experience /> */}
-      {/* <Tech /> */}
-      <Works />
-      <Hero />
-      {/* <Feedbacks /> */}
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
-    </div>
+    </>
   );
 };
 
