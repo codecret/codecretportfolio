@@ -301,7 +301,7 @@ const setup = [
   },
   {
     image: screenbar,
-    title: "Laptop Stand Holder With Cooling Fan",
+    title: "BenQ ScreenBar Halo",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, setup };
