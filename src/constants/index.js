@@ -19,8 +19,8 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
+  orsedacover,
+  Hora,
   ecommerce,
   threejs,
   macbook,
@@ -206,12 +206,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "User Managment",
+    name: "Orseda - Software Managment System",
     description:
-      "Web-based Admin Panel that allows admin and Employee to control customers including permissions. ",
+      "Web-based project featuring customized access for Scrum Masters and Employees, an admin dashboard for real-time insights, comprehensive project management with a drag-and-drop interface, centralized task management with a Kanban board, and integrated email services. Includes secure role-based access and user-friendly password recovery.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
@@ -223,24 +223,38 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: orsedacover,
     source_code_link: "https://github.com/Y7gn/user_managment_production",
   },
   {
-    name: "Blog",
+    name: "Hora – Appointment Management System",
     description:
-      "Web application that contains informative blogs allowing users to like, comment and control their profile pictures, including Admin. ",
+      "Appointment management web app, with search and view functionality, scheduling analytics, collaboration, multi-language support, and email notifications. (May take up to 50 seconds for a cold start.",
     tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
       {
         name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "NextJS",
+        name: "Express",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    // tags: [
+    //   {
+    //     name: "mongodb",
+    //     color: "green-text-gradient",
+    //   },
+    //   {
+    //     name: "NextJS",
+    //     color: "pink-text-gradient",
+    //   },
+    // ],
+    image: Hora,
     source_code_link: "https://github.com/Y7gn/L4U/",
   },
   {

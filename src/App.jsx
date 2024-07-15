@@ -22,22 +22,6 @@ const App = () => {
         {/* <Route path="/contact" component={Contact} /> */}
       </Routes>
     </Router>
-    // <div className="relative z-0 bg-primary">
-    //   <div className=" bg-cover bg-no-repeat bg-center">
-    //     <Navbar />
-    //     <Home />
-    //   </div>
-    //   <About />
-    //   {/* <Experience /> */}
-    //   {/* <Tech /> */}
-    //   <Works />
-    //   <Hero />
-    //   {/* <Feedbacks /> */}
-    //   <div className="relative z-0">
-    //     <Contact />
-    //     <StarsCanvas />
-    //   </div>
-    // </div>
   );
 };
 
