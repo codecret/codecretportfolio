@@ -28,7 +28,7 @@ const Footer = () => {
             <AiFillInstagram
               className="icon-social cursor-pointer"
               onClick={() =>
-                window.open("https://www.instagram.com/codecret/", "_blank")
+                window.open("https://www.instagram.com/codecret2/", "_blank")
               }
             />
             <AiFillGithub
