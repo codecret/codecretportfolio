@@ -3,6 +3,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import HomePage from "./HomePage";
 import Collection from "./Collection";
 import SharedLayout from "./SharedLayout";
+
 const App = () => {
   return (
     <Router>

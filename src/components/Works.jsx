@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
@@ -38,7 +39,7 @@ const ProjectCard = ({
               onClick={() => window.open(source_code_link, "_blank")}
               className="w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={github} alt="source code" className=" object-contain" />
+              <img src={"/urlimage.png"} alt="source code" className=" object-contain" />
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import { Outlet, Link } from "react-router-dom";
+"use client";
 import { Navbar, Footer } from "./components";
 
-const SharedLayout = () => {
+const SharedLayout = ({ children }) => {
   return (
     <div>
-      <Outlet />
+      {children}
       <Footer />
     </div>
   );

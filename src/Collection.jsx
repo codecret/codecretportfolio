@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
@@ -5,7 +6,7 @@ import { fadeIn } from "./utils/motion";
 import { setup } from "./constants/index";
 import herobg from "./assets/herobg.png";
 import { styles } from "./styles";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Navbar } from "./components";
 
 const SetupCard = ({ title, image, index }) => {
@@ -57,7 +58,7 @@ const Collection = () => {
               Collection
             </span>
           </h1>
-          <Link to={"/"}>{">"} Back</Link>
+          <Link href={"/"}>{">"} Back</Link>
           <div className="mt-20 gap-10 w-full lg:grid xl:grid md:grid grid-cols-3 h-full">
             {setup.map((e, index) => (
               <SetupCard title={e.title} image={e.image} index={index} />

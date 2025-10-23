@@ -1,0 +1,774 @@
+@page "/enquiry"
+
+<style>
+    .margin0label {
+        margin-bottom:0px;
+    }
+
+    .pad2pxvertical{
+        padding-bottom: 2px;
+        padding-top: 2px;
+    
+    }
+
+    *{
+        font-size: 10px;
+    }
+
+    .searchBtn{
+        border: none;
+        border-radius: 6px;
+        color: white;
+        padding: 2px 2px;
+        background: #063970
+    }
+
+    table, td, th {
+        border: 1px solid;
+    }
+
+    #collapse1 {
+        overflow: scroll;
+        height: 210px;
+    }
+
+    .table th,
+    .table td {
+      padding: 0.5rem 0.5rem;
+      text-align: center;
+    }
+
+
+    .table input {
+      width: 100%;
+    }
+
+    .tableinput{
+        border: none;
+        outline: none;
+    }
+
+    .enquiryDiv {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        align-items: center;
+    }
+
+    .enquiry {
+        background: #4eb085;
+        color: white;
+        padding: 2px 5px;
+        border-radius: 0 0 13px 13px;
+        font-size: 20px;
+        border:none;
+    }
+
+    .enquiry:hover {
+            background: #3ba874;
+    }
+
+    .arrowBtnLeft {
+        border: none;
+        border-top-right-radius: 15px;
+    }
+
+    .arrowBtnRight {
+        border: none;
+        border-top-left-radius: 15px;
+    }
+
+    .tabprev {
+        border-top-right-radius: 15px;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: end;
+    }
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<div class="container" >
+
+    <div class="icon" style="margin-top: -11px">
+        <div class="enquiryDiv">
+            <button class="arrowBtnLeft arrowBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left tabprev" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+            </button>
+            <div class="enquiry">Enquiry</div>
+            <button class="arrowBtnRight arrowBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-right tabnext" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+    <form>
+
+        <div class="row">
+
+            <div class="d-flex col-md-12 col-lg-4 col-sm-12 col-12 flex-column ms-0 mb-4">
+
+                <div class="row g-3 align-items-center" >
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblGroupId" class="form-label margin0label">Group ID: </label>
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <input type="text" class="form-control pad2pxvertical" id="txtGroupID" aria-describedby="GroupID" >
+                    </div>
+                    <div class="mb-3 col-1 me-0" >
+                        <button class="searchBtn"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="mb-3 col-5 ms-0" >
+                        <input type="text" class="form-control pad2pxvertical" id="GroupID" aria-describedby="GroupID">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <select class="form-select" aria-label="Customer ID">
+                            <option select value="Customer ID">Customer ID</option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <input type="text" class="form-control pad2pxvertical" style="background-color:#6ef163" id="txtCustomerID" aria-describedby="CustomerID">
+                    </div>
+                    <div class="mb-3 col-1 me-0">
+                        <button class="searchBtn"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="mb-3 col-5 ms-0" >
+                        <input type="text" class="form-control pad2pxvertical" style="background-color:#6ef163" id="CustomerID" aria-describedby="CustomerID">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblAddress" class="form-label margin0label">Address: </label>
+                    </div>
+                    <div class="mb-3 col-9 me-0">
+                        <input type="text" class="form-control pad2pxvertical" style="background-color:#6ef163" id="txtAddress" aria-describedby="Address">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblGroupId" class="form-label margin0label">City / State / Country: </label>
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <select class="form-select" style="background-color:#6ef163" aria-label="City">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <select class="form-select" style="background-color:#6ef163" aria-label="State">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <select class="form-select" style="background-color:#6ef163" aria-label="Country">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblEmail" class="form-label margin0label">Email: </label>
+                    </div>
+                    <div class="mb-3 col-6 me-0">
+                        <input type="text" class="form-control pad2pxvertical" style="background-color:#6ef163" id="txtEmail" aria-describedby="Email">
+                    </div>
+                    <div class="mb-3 col-3 me-0" style="color:blue">
+                        <center>Template</center>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblWeb" class="form-label margin0label">Web: </label>
+                    </div>
+                    <div class="mb-3 col-5 ms-0">
+                        <input type="text" class="form-control pad2pxvertical" id="Web" aria-describedby="Web">
+                    </div>
+                    <div class="mb-3 col-3 me-0">
+                        <input type="text" class="form-control pad2pxvertical" id="txtWeb" aria-describedby="Web">
+                    </div>
+                    <div class="mb-3 col-1 me-0">
+                        <button class="searchBtn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblLocation" class="form-label margin0label">Location: </label>
+                    </div>
+                    <div class="mb-3 col-9 me-0">
+                        <input type="text" class="form-control pad2pxvertical" id="txtLocation" aria-describedby="Location">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3 me-0">
+                        <label for="lblNarration" class="form-label margin0label">Narration: </label>
+                    </div>
+                    <div class="mb-3 col-9 me-0">
+                        <input type="text" class="form-control pad2pxvertical" style="background-color: #f3f3c4" id="txtNarration" aria-describedby="Narration">
+                    </div>
+                </div>
+
+                <div class="mb-3" style="font-size: 12px">
+                    <div class="row">
+                    <div class="form-check col-8 g-3">
+                            <input type="radio" id="one" name="first_item" value="1" />
+                            <label for="one" >Item</label>
+                            
+                            <input type="radio" id="two" class="ms-4" name="first_item" value="1" />
+                            <label for="two">Service</label>
+
+                            <input type="radio" id="three" class="ms-4" name="first_item" value="1" />
+                            <label for="three">GL</label>
+                    </div>
+                    <div class="mt-3 col-4">
+                        <input class="form-check-input ms-3" type="checkbox" checked id="defaultCheck">
+                        <label class="form-check-label" for="defaultCheck">
+                        Smart Search
+                        </label>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex col-md-12 col-lg-4 col-sm-12 col-12 flex-column ms-0 mb-4">
+
+                <div class="row ms-1">Notes:</div>
+                <div class="row g-3 align-items-center">
+                    <div class="mb-1 col-7" style="width: 100%">
+                        <textarea style="width: 100%" rows="16"></textarea>
+                    </div>
+                </div>
+
+                <div class="mb-3 mt-1 d-flex" style="font-size:14px">
+                    <span style="font-size:11px; color:goldenrod"><b>Notes</b></span>
+                    <div class="form-check d-flex g-3 ">
+                        <input type="radio" id="four" class="me-1" name="service" value="1" />
+                        <label for="four"><b>Item/Service</b></label>
+                    </div>
+                    <div>
+                        <input class="form-check-input ms-3" type="checkbox" checked id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Search Custom
+                        </label>
+
+                        <input class="form-check-input ms-3" type="checkbox" checked id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Custom Print
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 col-lg-4 p-0 mb-4 col-sm-12 col-12">
+                <div class="row" style="width: 100%">
+                    <div class="col-6">
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblDepartment" class="form-label margin0label">Department: </label>
+                            </div>
+                            <div class="mb-3 col-4" >
+                                <input type="text" class="form-control pad2pxvertical" id="txtDepartment" aria-describedby="Department">
+                            </div>
+                            <div class="mb-3 col-2" >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <input class="form-check-input" type="checkbox" checked id="defaultCheck1">
+                            
+                            <div class="mb-3 col-5" >
+                                <label for="lblFilterby" class="form-label margin0label">Filter by: </label>
+                            </div>
+                            
+                            <div class="mb-3 col-6" style="margin-left:2px">
+                                <select class="form-select" aria-label="Filter by">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 " >
+                                <label for="lblSource" class="form-label margin0label">Source: </label>
+                            </div>
+
+                            <div class="mb-3 col-6" >
+                                <select class="form-select" aria-label="Source">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblReferredBy" class="form-label margin0label">Referred By: </label>
+                            </div>
+                            <div class="mb-3 col-4 ">
+                                <input type="text" class="form-control pad2pxvertical" id="txtReferredBy" aria-describedby="ReferredBy">
+                            </div>
+                            <div class="mb-3 col-2 ">
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblReferredTel" class="form-label margin0label">Referred Tel: </label>
+                            </div>
+                            <div class="mb-3 col-6 " >
+                                <input type="text" class="form-control pad2pxvertical" id="txtReferredTel" aria-describedby="ReferredBy">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblAttendedBy" class="form-label margin0label">Attended By: </label>
+                            </div>
+                            <div class="mb-3 col-4 ">
+                                <input type="text" class="form-control pad2pxvertical" id="txtAttendedBy" aria-describedby="AttendedBy">
+                            </div>
+                            <div class="mb-3 col-2 " >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblSalesRep" class="form-label margin0label">Sales Rep: </label>
+                            </div>
+                            <div class="mb-3 col-4 ">
+                                <input type="text" class="form-control pad2pxvertical" style="background-color:#f9ded2" id="txtSalesRep" aria-describedby="SalesRep">
+                            </div>
+                            <div class="mb-3 col-2 ">
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-6 ">
+                                <label for="lblEnquiryRef" class="form-label margin0label">Enquiry Ref: </label>
+                            </div>
+                            <div class="mb-3 col-4 ">
+                                <input type="text" class="form-control pad2pxvertical" id="txtEnquiryRef" aria-describedby="EnquiryRef">
+                            </div>
+                            <div class="mb-3 col-2 " >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5" >
+                                <label for="lblEnquiryNo" class="form-label margin0label">Enquiry No: </label>
+                            </div>
+                            <div class="mb-3 col-5">
+                                <input type="text" class="form-control pad2pxvertical" id="txtEnquiryNo" aria-describedby="EnquiryNo">
+                            </div>
+                            <div class="mb-3 col-2 " >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5">
+                                <label for="lblDate" class="form-label margin0label">Date: </label>
+                            </div>
+                            <div class="mb-3 col-7">
+                                <input type="date" id="date" aria-describedby="date"
+                                       value="01/01/1980"
+                                       min="01/01/1920" max="01/01/2024">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5">
+                                <label for="lblThruDate" class="form-label margin0label">Thru Date: </label>
+                            </div>
+                            <div class="mb-3 col-7">
+                                <input type="date" id="ThruDate" aria-describedby="ThruDate"
+                                       value="01/01/1980"
+                                       min="01/01/1920" max="01/01/2024">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5">
+                                <label for="lblRemindDate" class="form-label margin0label">Remind Date: </label>
+                            </div>
+                            <div class="mb-3 col-7" >
+                                <input type="date" id="RemindDate" aria-describedby="RemindDate"
+                                       value="01/01/1980"
+                                       min="01/01/1920" max="01/01/2024">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5 ">
+                                <label for="lblStatus" class="form-label margin0label">Status: </label>
+                            </div>
+
+                            <div class="mb-3 col-7" >
+                                <select class="form-select" aria-label="Status">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5" >
+                                <label for="lblUserDefineStatus" class="form-label margin0label">User Define Status: </label>
+                            </div>
+                            <div class="mb-3 col-5" >
+                                <input type="text" class="form-control pad2pxvertical" id="txtUserDefineStatus" aria-describedby="UserDefineStatus">
+                            </div>
+                            <div class="mb-3 col-2 " >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="mb-3 col-5" >
+                                <label for="lblDocumentGroup" class="form-label margin0label">Document Group: </label>
+                            </div>
+                            <div class="mb-3 col-5" >
+                                <input type="text" class="form-control pad2pxvertical" id="txtDocumentGroup" aria-describedby="DocumentGroup">
+                            </div>
+                            <div class="mb-3 col-2 " >
+                                <button class="searchBtn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3" >
+                        <label for="lblJobID" class="form-label margin0label">Job ID: </label>
+                    </div>
+                    <div class="mb-3 col-6" style="margin-left: -5px">
+                        <input type="text" class="form-control pad2pxvertical" id="txtJobID" aria-describedby="JobID">
+                    </div>
+                    <div class="mb-3 col-1">
+                        <button class="searchBtn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="mb-3 col-3">
+                        <label for="lblCustomerRef" class="form-label margin0label">Customer Ref: </label>
+                    </div>
+                    <div class="mb-3 col-8" style="margin-left: -5px">
+                        <input type="text" class="form-control pad2pxvertical" id="txtCustomerRef" aria-describedby="CustomerRef">
+                    </div>
+                    <div class="mb-3 col-1">
+                        <button class="searchBtn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="table-responsive table-bordered" id="collapse1">
+                <table class="table">
+                    <tr style="background-color: #6ef163">
+                        <th>Service ID</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                        <th>U/Price</th>
+                        <th>Amount</th>
+                        <th>Net Amount</th>
+                        <th>VAT ID</th>
+                        <th>Gross Amt</th>
+                        <th>Phase Code</th>
+                        <th>Cost Code</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Start Time</th>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                     <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                     <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                     <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                     <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                     <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                        <td><input class="tableinput" type="text" size="10" /></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </form>
+</div>
+@code {
+
+}

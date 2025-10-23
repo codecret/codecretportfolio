@@ -1,17 +1,10 @@
+"use client";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
-import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    console.log("fdlsfldskfda");
-    navigate("/collection");
-  };
-
   return (
     <div className={`flex flex-col justify-center items-center h-screen`}>
       <section className={`relative w-full mx-auto`}>
@@ -34,12 +27,12 @@ const Hero = () => {
       <ComputersCanvas />
 
       {/* Centered button */}
-      <button
-        onClick={handleButtonClick}
-        className="bg-slate-700 px-5 py-3 rounded-lg my-8 cursor-pointer"
+      <a
+        href="/collection"
+        className="bg-slate-700 px-5 py-3 rounded-lg my-8 cursor-pointer inline-block"
       >
         Watch
-      </button>
+      </a>
     </div>
   );
 };
