@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="mt-8 sm:px-[140px] sm:py-10 px-6 py-4 bg-black mr-3 w-full ">
       <div className="flex justify-between">
         <div>
-          <p className="text-sm">Copyright © 2023. All rights are reserved</p>
+          <p className="text-sm">Copyright © 2025. All rights are reserved</p>
           <div className="flex mt-2 gap-3">
             <AiFillLinkedin
               className="icon-social  cursor-pointer"
