@@ -18,7 +18,7 @@ const Home = () => {
           </div>
 
           <h1 className={`${styles.heroHeadText} text-white container`}>
-            Hi, I'm
+            Hi, I&apos;m
             <span className="text-[#915EFF] up">
               <Typewriter
                 onInit={(typewriter) => {

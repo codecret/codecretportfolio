@@ -61,7 +61,7 @@ const Collection = () => {
           <Link href={"/"}>{">"} Back</Link>
           <div className="mt-20 gap-10 w-full lg:grid xl:grid md:grid grid-cols-3 h-full">
             {setup.map((e, index) => (
-              <SetupCard title={e.title} image={e.image} index={index} />
+              <SetupCard key={e.title} title={e.title} image={e.image} index={index} />
             ))}
           </div>
         </div>
