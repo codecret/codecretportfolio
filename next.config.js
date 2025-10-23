@@ -6,10 +6,14 @@ const nextConfig = {
     domains: ["localhost"],
     unoptimized: true,
   },
-  output: "export",
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: "dist",
+  // Only use 'output: export' for production builds
+  // For development, we need the standard Next.js server
+  ...(process.env.NODE_ENV === 'production' && {
+    output: "export",
+    trailingSlash: true,
+    skipTrailingSlashRedirect: true,
+    distDir: "dist",
+  }),
 };
 
 module.exports = nextConfig;
