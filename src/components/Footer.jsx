@@ -22,14 +22,14 @@ const Footer = () => {
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/mohammed-malek-alkhodary-47a763243/",
-                  "_blank"
+                  "_blank",
                 )
               }
             />
             <AiFillInstagram
               className="icon-social cursor-pointer"
               onClick={() =>
-                window.open("https://www.instagram.com/codecret1/", "_blank")
+                window.open("https://www.instagram.com/codecret/", "_blank")
               }
             />
             <AiFillGithub

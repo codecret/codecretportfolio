@@ -17,6 +17,7 @@ const App = () => {
           }
         >
           <Route index path="/" element={<HomePage />} />
+          <Route index path="/claude-test.txt" element={<ClaudeTest />} />
           <Route path="/collection" element={<Collection />} />
         </Route>
         {/* <Route path="/about" component={About} /> */}
